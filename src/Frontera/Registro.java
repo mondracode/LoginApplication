@@ -40,16 +40,11 @@ public class Registro extends javax.swing.JPanel {
 
         jLabel3.setText("Validar contraseña");
 
-        nombreTF.setText("jTextField1");
         nombreTF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nombreTFActionPerformed(evt);
             }
         });
-
-        contraseniaTF.setText("jTextField2");
-
-        validarContraseniaTF.setText("jTextField3");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
