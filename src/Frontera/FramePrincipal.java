@@ -5,10 +5,10 @@
  */
 package Frontera;
 
+import DAO.UsuarioDAO;
 import Entidad.Sistema;
 import java.util.ArrayList;
 import Entidad.Usuario;
-
 /**
  *
  * @author smggu
@@ -160,8 +160,11 @@ public class FramePrincipal extends javax.swing.JFrame {
     }
     
     public void inicializacion(){
+        UsuarioDAO dao = new UsuarioDAO();
+        
         ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
         
+         
         Usuario a = new Usuario();
         Usuario b = new Usuario();
         Usuario c = new Usuario();
@@ -180,13 +183,12 @@ public class FramePrincipal extends javax.swing.JFrame {
         usuarios.add(b);
         usuarios.add(c);
         
-        sistema.setUsuarios(usuarios);
         
-        
-        for(Usuario u : sistema.getUsuarios()){
+        for(Usuario u : usuarios){
             System.out.println(u.getNombre());
             System.out.println(u.getPassword());
             System.out.println("-------------");
+            dao.crear(u);
         }
     }
 
