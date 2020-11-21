@@ -32,10 +32,14 @@ public class ValidarLogin {
 //            }
 //        }
 
-        if(dao.leer(usuario) != null){
+        if(dao.leer(usuario).getNombre() != null){
+            System.out.println(dao.leer(usuario).getNombre());
             return "Bienvenido";
         }
-        return("Datos incorrectos");
+        else{
+            return("Datos incorrectos");
+        }
+        
     }
     
     public boolean verificarLongitudNombre (String nombre){
